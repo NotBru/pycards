@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pycards"
+version = "0.1.0"
+description = "Python-based flashcards learning app"
+authors = [
+    "Bru Ronchi <brunom.ronchi@gmail.com>",
+    "Juan Griffin <juanogriffin@gmail.com>"
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
