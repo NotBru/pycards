@@ -1,6 +1,6 @@
 # PyCards
 
-Python-based flashcards learning app
+Python-based flashcards learning app. For further reading check [this article](https://en.wikipedia.org/wiki/Leitner_system).
 
 ## Contributing
 
