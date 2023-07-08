@@ -9,7 +9,7 @@ authors = [
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^3.2.2"
