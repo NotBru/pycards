@@ -1,13 +1,20 @@
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
 from datetime import datetime
 
-from pycards.cards.base import Card
+
+@dataclass
+class Weekpoint:
+    day_of_week: int
+    hour: int
+    minute: int
+    second: int
 
 
 class Scheduler(ABC):
     @abstractmethod
-    def deal(self, dt: datetime) -> list[tuple[int, Card]]:
-        """Batch-provide indexed cards, according to schedule
+    def load(self, dt: datetime) -> int:
+        """Provide number of extra cards to deal, according to some schedule
 
         Parameters
         ----------
@@ -16,19 +23,7 @@ class Scheduler(ABC):
 
         Returns
         -------
-        [(idx, card)]
-            card : Card
-            idx : Card index, for later feedback
-        """
-        raise NotImplementedError
-
-    @abstractmethod
-    def update(self, performance: list[tuple[int, float]]):
-        """Update knowledge of user performance
-
-        Parameters
-        ----------
-        performance : list[tuple[int, float]]
-            [(idx, perf)] where perf is the performance during card prompt
+        int
+            Number of cards to deal
         """
         raise NotImplementedError
