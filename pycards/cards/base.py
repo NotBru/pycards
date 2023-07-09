@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from pycards.engine.base import Engine
+from pycards.engines.base import Engine
 
 
 class Card(ABC):

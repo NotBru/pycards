@@ -52,3 +52,4 @@ class Engine(ABC):
             raise TypeError(err)
         fetched = self._fetch(kind, **kwargs)
         assert isinstance(fetched, kind)
+        return fetched
