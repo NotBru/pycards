@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 
-class Engine(ABC):
+class Backend(ABC):
     @property
     @abstractmethod
     def supported_output(self) -> tuple[type]:
@@ -27,7 +27,7 @@ class Engine(ABC):
     def show(self, element: Any, **kwargs) -> int:
         if not isinstance(element, self.supported_output):
             err = (
-                "Current engine only supports types in "
+                "Current backend only supports types in "
                 + self._supported_string(self.supported_output)
                 + "for output"
             )
@@ -45,7 +45,7 @@ class Engine(ABC):
     def fetch(self, kind: type, **kwargs) -> Any:
         if not issubclass(kind, self.supported_input):
             err = (
-                "Current engine only supports types in "
+                "Current backend only supports types in "
                 + self._supported_string(self.supported_output)
                 + "for input"
             )

@@ -1,9 +1,9 @@
 from typing import Any
 
-from pycards.engines.base import Engine
+from pycards.backends.base import Backend
 
 
-class BasicTerminal(Engine):
+class BasicTerminal(Backend):
     def __init__(self):
         self._id = -1
 

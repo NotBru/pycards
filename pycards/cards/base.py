@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 
-from pycards.engines.base import Engine
+from pycards.backends.base import Backend
 
 
 class Card(ABC):
     @abstractmethod
-    def prompt(self, engine: Engine) -> float:
+    def prompt(self, backend: Backend) -> float:
         """Prompt user for a challenge and evaluate response
 
         Returns
